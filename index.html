@@ -1,0 +1,221 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+        .nav {
+            background-color: #e4e4e4;
+            font-family: 'Roboto', 'Ubuntu', sans-serif;
+            font-size: 1 rem;
+            color: #444444;
+        }
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        a {
+            text-decoration: none;
+            outline: none;
+            color: #444444;
+            transition:all .33s linear;
+            -webkit-transition:all .33s linear;
+        }
+        a span {
+            display: block;
+            padding: 1rem 5rem 1rem 3rem;
+        }
+        ul {
+            list-style: none;
+            padding: 0rem;
+        }
+        .container {
+            margin: 0 5rem 0 5rem;
+        }
+        .logo {
+            margin: 1rem 1rem 1rem 1rem;
+        }
+        .text-logo {
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            font-family: 'Roboto', 'Ubuntu', sans-serif;
+            box-sizing: border-box;
+            background-color: transparent;
+            font-size: 42px;
+            line-height: 42px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            position: relative;
+            color: #000000 !important;
+            text-decoration: none !important;
+            outline: none;
+        }
+        .text-logo:after {
+            content: ".ru";
+            position: absolute;
+            top: -1px;
+            right: -23px;
+            font-size: 13px;
+            background: #cdd5e4;
+            background: #ddd;
+            line-height: 20px;
+            width: 20px;
+            text-align: center;
+            border-radius: 30px;
+            letter-spacing: 0px;
+        }
+        .buttom-home {
+            height: 3.2rem;
+            padding: 0 1rem;
+            background-color: #ecd609;
+            position:relative;
+            width: 1.3rem;
+        }
+        .buttom-home a {
+            position:absolute;
+            top: 0.5rem;
+            left: 0.6rem;
+        }
+        .topmenu {
+            display: flex;
+        }
+        .topmenu__item {
+            position: relative;
+        }
+        .topmenu__item:hover {
+            background-color: #ecd609;
+        }
+        .topmenu__item:hover > .submenu {
+            display: block;
+            background-color: #e4e4e4;
+        }
+        .submenu {
+            position: absolute;
+            left: 0rem;
+            top: 2rem;
+            display: none;
+            width: 13rem;
+        }
+        .submenu li a:hover {
+            color:#ecd609;
+        }
+        .group__inner {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Roboto', 'Ubuntu', sans-serif;
+            font-size: 1 rem;
+            color: #444444;
+            padding-top: 0.5rem;
+        }
+        .group__item {
+            width: 25%;
+            text-align: center;
+        }
+        .group__item:hover > i {
+            color:#ecd609;
+        }
+        .group__br {
+            width: 0.01rem;
+            background-color: #e4e4e4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="text-logo">KROS</a>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="container">
+                <div class="nav__inner">
+                    <div class="buttom-home">
+                        <a href='#' class='home'><i class="fa fa-home fa-2x"></i></a>
+                    </div>
+                    <div class="topmenu">                
+                        <div class="topmenu__item">
+                            <a href="#"><span>Section 1</span></a>
+                            <ul class="submenu">
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="topmenu__item">
+                            <a href="#"><span>Section 1</span></a>
+                            <ul class="submenu">
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="topmenu__item">
+                            <a href="#"><span>Section 1</span></a>
+                            <ul class="submenu">
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="topmenu__item">
+                            <a href="#"><span>Section 1</span></a>
+                            <ul class="submenu">
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group">
+            <div class="group__inner">
+                <div class="group__item">
+                    <i class='fa fa-user'></i>
+                    Text text text
+                </div>
+                <div class="group__br"></div>
+                <div class="group__item">
+                    <i class='fa fa-headphones'></i>
+                    <a>Text text text</a>
+                </div>
+                <div class="group__br"></div>
+                <div class="group__item">
+                    <i class='fa fa-wrench'></i>
+                    <a>Text text text</a>
+                </div>
+                <div class="group__br"></div>
+                <div class="group__item">
+                    <i class='fa fa-heart'></i>
+                    <a>Text text text</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="main">
+
+            </div>
+            <div class="slider">
+
+            </div>
+            <div class="price">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
+</body>
