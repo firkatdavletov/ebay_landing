@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <style>
         body {
+            font-family: 'Roboto', 'Ubuntu', sans-serif;
             background-color: #ffffff;
             box-sizing: border-box;
         }
@@ -32,6 +33,10 @@
             list-style: none;
             padding: 0rem;
         }
+        footer {
+            margin: 2rem 0;
+            color: #444444;
+        }
         .container {
             margin: 0 5rem 0 5rem;
         }
@@ -40,7 +45,6 @@
         }
         .text-logo {
             -webkit-tap-highlight-color: rgba(0,0,0,0);
-            font-family: 'Roboto', 'Ubuntu', sans-serif;
             box-sizing: border-box;
             background-color: transparent;
             font-size: 42px;
@@ -104,7 +108,6 @@
         .group__inner {
             display: flex;
             justify-content: space-between;
-            font-family: 'Roboto', 'Ubuntu', sans-serif;
             font-size: 1 rem;
             color: #444444;
             padding-top: 0.5rem;
@@ -119,6 +122,166 @@
         .group__br {
             width: 0.01rem;
             background-color: #e4e4e4;
+        }
+        .main {
+            display: flex;
+            margin-top: 2rem;
+        }
+        .main__description {
+            margin: 0rem 0rem 0rem 2rem;
+        }
+        .main__title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333333;
+        }
+        .main__subtitle {
+            font-style: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333333;
+        }
+        .main__items li {
+            color: #444444;
+            margin-bottom: 1rem;
+            border-bottom: 0.05rem solid #e4e4e4;
+        }
+        .main__items li i {
+            color: #ecd609;
+        }
+        .main__end {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            color: #333333;
+            margin: 2rem 0;
+        }
+        .main__guide {
+            display: flex;
+            color: #444444;
+        }
+        .red_text {
+            color: #ec2727;
+        }
+        .tabs {
+	        padding: 0rem;
+	        margin: 2rem auto;
+            color: #444444;
+        }
+        .tabs > section {
+	        display: none;
+	        padding: 1rem;
+	        background: #fff;
+	        border: 1px solid #e4e4e4;
+        }
+        .tabs>section>p {
+	        margin: 0 0 5px;
+	        line-height: 1.5;
+	        color: #383838;
+	        -webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	        -webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+	        -webkit-animation-name: fadeIn;
+	        animation-name: fadeIn;
+        }
+        @-webkit-keyframes fadeIn {
+	        from {
+	        	opacity: 0;
+	        }
+	        to {
+	        	opacity: 1;
+	        }
+        }
+        @keyframes fadeIn {
+        	from {
+        		opacity: 0;
+        	}
+        	to {
+        		opacity: 1;
+        	}
+        }
+        .tabs>input {
+	        display: none;
+	        position: absolute;
+        }
+        .tabs>label {
+	        display: inline-block;
+	        margin: 0 0 -1px;
+	        padding: 15px 25px;
+	        font-weight: 600;
+	        text-align: center;
+	        color: #aaa;
+	        border: 0px solid #e4e4e4;
+	        border-width: 1px 1px 1px 1px;
+	        background: #f1f1f1;
+	        border-radius: 3px 3px 0 0;
+        }
+        .tabs>label:hover {
+	        color: #888;
+	        cursor: pointer;
+        }
+        .tabs>input:checked+label {
+	        color: #555;
+	        border-top: 1px solid #ecd609;
+	        border-bottom: 1px solid #fff;
+	        background: #fff;
+        }
+        #tab1:checked~#content-tab1, #tab2:checked~#content-tab2, #tab3:checked~#content-tab3, #tab4:checked~#content-tab4 {
+	        display: block;
+        }
+        .products__title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            color: #444444;
+            margin: 2rem 0;
+        }
+        .product__items {
+            display: flex;
+            justify-content: space-between;
+        }
+        .product-item {
+            width: 15rem;
+            margin: 0 auto;
+            padding: 10px 10px 5px 10px;
+            border: 1px solid #e4e4e4;
+            background: white;
+            font-family: "Open Sans";
+            overflow: hidden;
+            transition: .4s linear;
+        }
+        .product-img {transition: 1s ease-in-out;}
+        .product-img:hover {transform: scale(1.1);}
+        .product-img img {
+            display: block;
+            width: 100%;
+        }
+        .product-list {margin-top: 15px;}
+        .product-list h3 {
+            font-weight: 700;
+            color: #39404B;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 2;
+        }
+        .price {
+            color: #E34D38;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .footer__title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: #e4e4e4;
+            line-height: 4rem;
+        }
+        .footer__columns {
+            display: flex;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -139,37 +302,37 @@
                         <div class="topmenu__item">
                             <a href="#"><span>Section 1</span></a>
                             <ul class="submenu">
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text1</span></a></li>
+                                <li><a href="#"><span>text2</span></a></li>
+                                <li><a href="#"><span>text3</span></a></li>
+                                <li><a href="#"><span>text4</span></a></li>
                             </ul>
                         </div>
                         <div class="topmenu__item">
-                            <a href="#"><span>Section 1</span></a>
+                            <a href="#"><span>Section 2</span></a>
                             <ul class="submenu">
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text1</span></a></li>
+                                <li><a href="#"><span>text2</span></a></li>
+                                <li><a href="#"><span>text3</span></a></li>
+                                <li><a href="#"><span>text4</span></a></li>
                             </ul>
                         </div>
                         <div class="topmenu__item">
-                            <a href="#"><span>Section 1</span></a>
+                            <a href="#"><span>Section 3</span></a>
                             <ul class="submenu">
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text1</span></a></li>
+                                <li><a href="#"><span>text2</span></a></li>
+                                <li><a href="#"><span>text3</span></a></li>
+                                <li><a href="#"><span>text4</span></a></li>
                             </ul>
                         </div>
                         <div class="topmenu__item">
-                            <a href="#"><span>Section 1</span></a>
+                            <a href="#"><span>Section 4</span></a>
                             <ul class="submenu">
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
-                                <li><a href="#"><span>text</span></a></li>
+                                <li><a href="#"><span>text1</span></a></li>
+                                <li><a href="#"><span>text2</span></a></li>
+                                <li><a href="#"><span>text3</span></a></li>
+                                <li><a href="#"><span>text4</span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -180,7 +343,7 @@
             <div class="group__inner">
                 <div class="group__item">
                     <i class='fa fa-user'></i>
-                    Text text text
+                    <a>Text text text</a> 
                 </div>
                 <div class="group__br"></div>
                 <div class="group__item">
@@ -203,20 +366,176 @@
     <div class="content">
         <div class="container">
             <div class="main">
-                <div class="main__image"></div>
-                <div class="main__title"></div>
+                <div class="main__image">
+                    <img src="https://i.ibb.co/kKnZvsB/image.jpg" alt="image" border="0">
+                </div>
+                <div class="main__description">
+                    <div class="main__title">
+                        TEXT TEXT 
+                    </div>
+                    <div class="main__subtitle">
+                        TExt text text
+                    </div>
+                    <div class="main__items">
+                        <ul>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </li>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </li>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </li>  
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main__end">
+                        Excepteur sint occaecat!
+                    </div>
+                    <div class="main__guide">
+                        <div class="main__guide-step_one">
+                            <img src="https://www.lizengo-games.de/media/unknown/af/f6/3d/step-01.svg" alt="schritt1" class="anleitung">
+                            <p><span class='red_text'>01. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="main__guide-step_two">
+                            <img src="https://www.lizengo-games.de/media/unknown/3f/f6/b1/step-02.svg" alt="schritt2" class="anleitung">
+                            <p><span class='red_text'>02. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="main__guide-step_three">
+                            <img src="https://www.lizengo-games.de/media/unknown/fb/3b/f0/step-03.svg" alt="schritt3" class="anleitung">
+                            <p><span class='red_text'>03. </span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="slider">
-
+            <div class="tabs">
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label for="tab1" title="Вкладка 1">Вкладка 1</label>
+                <input id="tab2" type="radio" name="tabs" checked>
+                <label for="tab2" title="Вкладка 2">Вкладка 2</label>
+                <input id="tab3" type="radio" name="tabs" checked>
+                <label for="tab3" title="Вкладка 3">Вкладка 3</label>
+                <section id="content-tab1">
+                    <div class="main__subtitle">
+                        TExt text text
+                    </div>
+                    <div class="main__items">
+                        <ul>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </li>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </li>
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </li>  
+                            <li>
+                                <i class='fa fa-angle-right'></i>
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            </li>
+                        </ul>
+                    </div>
+                    <h3><i class='fa fa-download'></i>  Lorem ipsum dolor</h3>
+                    <p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+                </section>  
+                <section id="content-tab2">
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </section> 
+                <section id="content-tab3">
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </section> 
             </div>
-            <div class="price">
-
+            <div class="products">
+                <div class="products__title">Ut enim ad minim veniam</div>
+                <div class="product__items">  
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="https://madeshop.ru/kros/image/cache/catalog/demo/product/1-228x228.jpeg" alt="Nike AIR FORCE " title="Nike AIR FORCE " class="img-responsive cat50">
+                            </a>
+                        </div>
+                        <div class="product-list">
+                            <h3>Lorem ipsum dolor sit amet</h3>
+                            <span class="price">₽ 1999</span>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="https://madeshop.ru/kros/image/cache/catalog/demo/product/1-228x228.jpeg" alt="Nike AIR FORCE " title="Nike AIR FORCE " class="img-responsive cat50">
+                            </a>
+                        </div>
+                        <div class="product-list">
+                            <h3>Ut enim ad minim veniam</h3>
+                            <span class="price">₽ 1999</span>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="https://madeshop.ru/kros/image/cache/catalog/demo/product/1-228x228.jpeg" alt="Nike AIR FORCE " title="Nike AIR FORCE " class="img-responsive cat50">
+                            </a>
+                        </div>
+                        <div class="product-list">
+                            <h3>Duis aute irure dolor in</h3>
+                            <span class="price">₽ 1999</span>
+                        </div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-img">
+                            <a href="#">
+                                <img src="https://madeshop.ru/kros/image/cache/catalog/demo/product/1-228x228.jpeg" alt="Nike AIR FORCE " title="Nike AIR FORCE " class="img-responsive cat50">
+                            </a>
+                        </div>
+                        <div class="product-list">
+                            <h3>Voluptate velit esse cillum</h3>
+                            <span class="price">₽ 1999</span>
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
     </div>
     <footer>
+        <div class="footer__title">
+            <div class="container">
+                Lorem ipsum dolor sit amet
+            </div>
+        </div>
         <div class="container">
-
+            <div class="footer__columns">
+                <div class="footer__column-one">
+                    <h3>Lorem</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="footer__column-two">
+                    <h3>Ut enim</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> 
+                </div>
+                <div class="footer__column-three">
+                    <h3>Duis aute</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="footer__column-four">
+                    <h3>Lorem ipsum</h3>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
